@@ -8,7 +8,7 @@ $(function() {
     //     asNavFor: '.slider__mini',
     //     // dots: true,
     //     fade: true,
- 
+
     // });
 
     // $('.slider__mini').slick({
@@ -28,17 +28,31 @@ $(function() {
         arrows: true,
         fade: true,
         asNavFor: '.slider__mini',
-        focusOnSelect: true,
-      });
-      $('.slider__mini').slick({
+        centerMode: true,
+        speed: 1000,
+        //focusOnSelect: true,
+        //infinite: true,
+        //adaptiveHeight: true,
+
+        //useTransform: true,
+        //infinite: true,
+    });
+    $('.slider__mini').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
+
+
         asNavFor: '.slider__inner',
         arrows: false,
-        dots: true,
-        centerMode: true,
+        dots: false,
+        //centerMode: true,
+        variableWidth: true,
+
         focusOnSelect: true,
-      });
+        infinite: true,
+        speed: 1200,
+
+    });
 
 });
 
