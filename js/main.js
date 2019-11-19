@@ -7,6 +7,13 @@ $(function() {
         asNavFor: '.slider__mini',
         centerMode: true,
         speed: 1000,
+        responsive: [{
+            breakpoint: 620,
+            settings: {
+                arrows: false
+                    // dots: true,
+            }
+        }]
     });
 
     $('.slider__mini').slick({
@@ -18,6 +25,46 @@ $(function() {
         focusOnSelect: true,
         infinite: true,
         speed: 1000,
+        responsive: [{
+                breakpoint: 940,
+                settings: {
+                    slidesToScroll: 1,
+                    slidesToShow: 5,
+                    variableWidth: false,
+                    // dots: true,
+                }
+            },
+            {
+                breakpoint: 770,
+                settings: {
+                    slidesToScroll: 1,
+                    slidesToShow: 4,
+                    variableWidth: false,
+                }
+            },
+            {
+                breakpoint: 580,
+                settings: {
+                    slidesToScroll: 1,
+                    slidesToShow: 3,
+                    variableWidth: false,
+                }
+            },
+            {
+                breakpoint: 440,
+                settings: {
+                    slidesToScroll: 1,
+                    slidesToShow: 2,
+                    variableWidth: false,
+                }
+            }
+        ]
+    });
+
+
+
+    $('.header__menu-burger').on('click', function() {
+        $('.header__menu__list').slideToggle();
     });
 
 });
