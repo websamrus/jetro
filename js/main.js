@@ -43,7 +43,7 @@ $(function() {
                 }
             },
             {
-                breakpoint: 580,
+                breakpoint: 600,
                 settings: {
                     slidesToScroll: 1,
                     slidesToShow: 3,
@@ -51,7 +51,7 @@ $(function() {
                 }
             },
             {
-                breakpoint: 440,
+                breakpoint: 460,
                 settings: {
                     slidesToScroll: 1,
                     slidesToShow: 2,
@@ -66,5 +66,8 @@ $(function() {
     $('.header__menu-burger').on('click', function() {
         $('.header__menu__list').slideToggle();
     });
+
+
+
 
 });
