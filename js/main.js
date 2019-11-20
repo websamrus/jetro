@@ -11,7 +11,6 @@ $(function() {
             breakpoint: 620,
             settings: {
                 arrows: false
-                    // dots: true,
             }
         }]
     });
@@ -31,7 +30,6 @@ $(function() {
                     slidesToScroll: 1,
                     slidesToShow: 5,
                     variableWidth: false,
-                    // dots: true,
                 }
             },
             {
@@ -65,6 +63,12 @@ $(function() {
 
     $('.header__menu-burger').on('click', function() {
         $('.header__menu__list').slideToggle();
+    });
+
+    $('.slider').on('click', function() {
+        if ($('.header__menu__list').css('display') == 'block') {
+            $('.header__menu__list').slideToggle();
+        }
     });
 
 
