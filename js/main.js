@@ -66,10 +66,21 @@ $(function() {
     });
 
     $('.slider').on('click', function() {
-        if ($('.header__menu__list').css('display') == 'block') {
+        if ($('.header__menu__list').css('display') == 'block' &&
+            $('.header__menu-burger').css('display') == 'block') {
             $('.header__menu__list').slideToggle();
+            $('.header__menu-burger > div:first-child+div').toggleClass('menu__burger-none');
+            $('.header__menu-burger > div:first-child').toggleClass('menu__burger-first');
+            $('.header__menu-burger > div:last-child').toggleClass('menu__burger-last');
         }
     });
+
+    $('.header__menu-burger').on('click', function() {
+        $('.header__menu-burger > div:first-child+div').toggleClass('menu__burger-none');
+        $('.header__menu-burger > div:first-child').toggleClass('menu__burger-first');
+        $('.header__menu-burger > div:last-child').toggleClass('menu__burger-last');
+    });
+
 
 
 
