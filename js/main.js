@@ -7,6 +7,7 @@ $(function() {
         asNavFor: '.slider__mini',
         centerMode: true,
         speed: 1000,
+        autoplay: false,
         responsive: [{
             breakpoint: 620,
             settings: {
