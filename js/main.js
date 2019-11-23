@@ -10,7 +10,9 @@ $(function() {
         responsive: [{
             breakpoint: 620,
             settings: {
-                arrows: false
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
             }
         }]
     });
@@ -40,22 +42,6 @@ $(function() {
                     variableWidth: false,
                 }
             },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToScroll: 1,
-                    slidesToShow: 3,
-                    variableWidth: false,
-                }
-            },
-            {
-                breakpoint: 460,
-                settings: {
-                    slidesToScroll: 1,
-                    slidesToShow: 2,
-                    variableWidth: false,
-                }
-            }
         ]
     });
 
@@ -65,9 +51,9 @@ $(function() {
         $('.header__menu__list').slideToggle();
     });
 
-    $('.slider').on('click', function() {
+    $('.slider, .feature').on('click', function(e) {
         if ($('.header__menu__list').css('display') == 'block' &&
-            $('.header__menu-burger').css('display') == 'block') {
+            $('.header__menu-burger').css('display') == 'block' ){
             $('.header__menu__list').slideToggle();
             $('.header__menu-burger > div:first-child+div').toggleClass('menu__burger-none');
             $('.header__menu-burger > div:first-child').toggleClass('menu__burger-first');
@@ -82,6 +68,16 @@ $(function() {
     });
 
 
+    $('.contact__icon').jrumble({
+        x: 1,
+        y: 1,
+        rotation: 1
+        });
+       $('.contact__icon').hover(function(){
+       $(this).trigger('startRumble');
+       }, function(){
+       $(this).trigger('stopRumble');
+       });
 
 
 
